@@ -1,0 +1,33 @@
+    <div>
+    <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+        <div  class="form-group">
+            <div role="banner"></div>
+                <label for="plate">Placa: </label>
+                <input type="text" id="plate" required ngModel name="plate"><br><br>
+                
+                <label for="color">Color: </label>
+                <input type="text" id="color" required ngModel name="color"><br><br>
+                <label for="model">Modelo: </label>
+                <input type="text" id="model" required ngModel name="model"><br><br>
+                <label for="chassis">Chasis: </label>
+                <input type="text" id="chassis" required ngModel name="chassis"><br><br>
+                <label for="proprietary">Propietario: </label>
+                <input type="text" id="proprietary" required ngModel name="proprietary"><br><br>
+                <button
+                class="btn btn-primary"
+                type="submit"
+                >
+                Save
+                </button>
+            </div>
+    </form>
+
+    <div>
+        <ul>
+            <h2>Lista de Placas Almacenadas</h2>
+            <li *ngFor="let plate of plateList">
+                {{plate.plate}}
+            </li>
+        </ul>
+    </div>
+</div>

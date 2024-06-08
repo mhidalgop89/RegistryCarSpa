@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RegistryCarSpa';
+
+  myFunc(){
+    console.log("function called");
+    alert('hello');
+  }
+
 }

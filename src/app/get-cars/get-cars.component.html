@@ -1,0 +1,23 @@
+<!--<form #postForm="ngForm" (ngSubmit)="fetchPosts(postForm.value)">-->
+    <div  class="form-group">
+        <div role="banner"></div>
+            <label for="plate">Placa: </label>
+            <!--<input type="text" id="plate" required ngModel name="plate"><br><br>-->
+            <input type="text" [(ngModel)]="plate" ><br><br>
+            <label for="date">Date: </label>
+            <input type="datetime-local" min="{{currentDay}}" [(ngModel)]="today"/><br><br>
+            <!--<button type="submit" (click)="fetchPosts()">save</button>-->
+            <button type="submit" (click)="getInfo()">Consulta</button>
+
+        </div>
+        <div>
+            <dialog id="myDialog"> 
+                <ul>
+                    <li>Placa: {{car.car.plate}}</li>
+                    <li>Modelo: {{car.car.model}}</li>
+                    <li>Chasis: {{car.car.chassis}}</li>
+                    <li>Mensaje: {{car.message}}</li>
+                </ul> 
+            </dialog>
+        </div>
+<!--</form>-->
